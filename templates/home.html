@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='css/jqcloud.min.css')}}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div id="word_cloud"></div>
+</div>
+{% endblock %}
+{% block scripts %}
+{{super()}}
+<script src="{{url_for('static', filename='js/jqcloud.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/script.js')}}"></script>
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="currency container">
+    {% if params %}
+    <div class="datavalues hidden">
+        {% for key,val in params.iteritems() %}
+            <div class="{{key}}" data-{{key}}="{{val}}"></div>
+        {% endfor %}
+    </div>
+    <h1>Know what's new with {{c_name.capitalize()}}</h1>
+            <div class="container">
+                <div class="row">
+                    <div id="ratingdiv" class="col chartswrap" data-rating="{{params['rating']}}" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div>
+                    <div id="dominancediv" class="col chartswrap" data-dom="{{params['dominance']}}" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div>
+                    <div id="popularitydiv" class="col chartswrap" data-dom="{{params['popularity']}}" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="status">
+                {% if params['trusted'] == 2 %}
+                    <span class="badge badge-success">Trusted</span>
+                {% endif %}
+                {% if params['trusted'] == 1 %}
+                    <span class="badge badge-warning">Quite safe</span>
+                {% endif %}
+                {% if params['trusted'] == 0 %}
+                    <span class="badge badge-danger">Risky</span>
+                {% endif %}
+                </div>
+            </div>
+            <div class="container">
+                <div id="carouselExampleIndicators" class="carousel slide charts-carousel" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="jumbotron jumbotron-fluid dominance-wrap">
+                                <div class="container">
+                                        <div class="row" id="skewness-chart" style="min-width: 310px; max-width: 800px; height: 100px; margin: 0 auto"></div>
+                                        <div class="row" id="kurtosis-chart" style="min-width: 310px; max-width: 800px; height: 100px; margin: 0 auto"></div>
+                                        <div class="row" id="sd-chart" style="min-width: 310px; max-width: 800px; height: 100px; margin: 0 auto"></div>
+                                        <div class="row" id="spread-chart" style="min-width: 310px; max-width: 800px; height: 100px; margin: 0 auto"></div>
+                                        <div class="row" id="marketcap-chart" style="min-width: 310px; max-width: 800px; height: 100px; margin: 0 auto"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="jumbotron jumbotron-fluid dominance-wrap">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col rating"><div id="statsdiv"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="jumbotron jumbotron-fluid domains-wrap">
+                    <div class="container">
+                        <span badge badge-info><a href="{{ url_for('currency_domains', c_name=c_name) }}">Find top domains for {{ c_name }}</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+
+        <div class="container">
+            <div class="row">
+                <p>An unexpected error occured. No data was received for this currency.</p>
+            </div>
+        </div>
+
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/histogram-bellcurve.js">
+<script src="https://code.highcharts.com/modules/bullet.js"></script>
+<!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
+<!--<script src="https://code.highcharts.com/modules/export-data.js"></script>-->
+<script src="{{url_for('static', filename='js/charts.js')}}"></script>
+{% endblock %}

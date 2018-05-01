@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="domains container">
+    <h4>Top domains for {{ c_name }}</h4>
+    <ul class="list-group">
+        {% for item in domains %}
+            <li class="list-group-item"><a href="http://{{ item[0] }}" target="_blank">{{item[0]}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

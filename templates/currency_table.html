@@ -6,6 +6,18 @@
 {% endblock %}
 {% block content %}
 <div class="container">
+    <div class="alert alert-info" role="alert">
+        <h4>The ratings of the currencies are based on the following parameters:</h4>
+        <ul>
+            <li>Popularity(%) - This is calculated using the crypto news database. It is quantified by the frequency of mentions in the news articles.</li>
+            <li>Market Capital Dominance(%) - This is the share of the currency in global crypto market.</li>
+            <li>Volatility(%) - This is quantified by the percent spread of 90-days closing prices of the currency about the mean. <a href="https://www.investopedia.com/terms/v/volatility.asp">Learn more</a></li>
+            <li>Skewness - The skewness is a measure of symmetry 90-days closing prices about their mean. <a href="https://www.investopedia.com/terms/s/skewness.asp">Learn more</a></li>
+            <li>Kurtosis - The kurtosis is a measure of likelihood of extreme outcomes. <a href="https://www.investopedia.com/terms/e/excesskurtosis.asp">Learn more</a></li>
+        </ul>
+    </div>
+</div>
+<div class="container">
     <div id="list-wrap" class="table-responsive">
         <table id="currencylist" class="table table-hover table-bordered">
             <thead>
@@ -14,7 +26,7 @@
                     <th>Rating</th>
                     <th>Popularity(%)</th>
                     <th>Market Dominance(%)</th>
-                    <th>Volatility</th>
+                    <th>Volatility(%)</th>
                     <th>kurtosis</th>
                     <th>skewness</th>
                 </tr>

@@ -72,7 +72,7 @@ class CryptoCompareData(object):
         try:
             url = 'https://www.cryptocompare.com/api/data/socialstats/?id='
             df = self.coinlist.loc[(self.coinlist['Name'] == currency) | (self.coinlist['Symbol'] == currency) | (
-                    self.coinlist['CoinName'].str.lower() == currency)]
+                self.coinlist['CoinName'].str.lower() == currency)]
             id = list(df['Id'])[0]
             url = url + str(id)
             response = self.callAPI(url)
@@ -83,19 +83,19 @@ class CryptoCompareData(object):
         except:
             print "An unexpected error occurred. Data could not be fetched."
 
-    # def getAverageData(self, days=30, currency='BTC'):
-    #     try:
-    #         df = self.getDataByDays(days=days, aggregate=1, currency=currency)
-    #         times = list(df['time'])
-    #         url = self.baseurl + 'dayAvg?fsym=' + currency + '&tsym=USD&avgType=HourVWAP&extraParams=cryptotales&toTs='
-    #         avgPrices = []
-    #         for time in times:
-    #             response = self.callAPI(url + str(time))
-    #             avgPrices.append(response['USD'])
-    #         df['AvgPrice'] = avgPrices
-    #         return df
-    #     except:
-    #         print "An unexpected error occurred. Data could not be fetched."
+            # def getAverageData(self, days=30, currency='BTC'):
+            #     try:
+            #         df = self.getDataByDays(days=days, aggregate=1, currency=currency)
+            #         times = list(df['time'])
+            #         url = self.baseurl + 'dayAvg?fsym=' + currency + '&tsym=USD&avgType=HourVWAP&extraParams=cryptotales&toTs='
+            #         avgPrices = []
+            #         for time in times:
+            #             response = self.callAPI(url + str(time))
+            #             avgPrices.append(response['USD'])
+            #         df['AvgPrice'] = avgPrices
+            #         return df
+            #     except:
+            #         print "An unexpected error occurred. Data could not be fetched."
 
 
 class CoinMarketCapData(object):
@@ -147,22 +147,26 @@ class CoinMarketCapData(object):
         except:
             print "An unexpected error occurred. Data could not be fetched."
 
+
 # if __name__ == '__main__':
-#     a = CryptoCompareData()
-#     a.getCoinList()
-#     a.getDataByDays()
-#     a.getDataByHour()
-#     a.getSocialStats()
-#     a.getAverageData()
-#     twitter, reddit, facebook = a.getSocialStats()
-#     print facebook
-#     twitter, reddit, facebook = a.getSocialStats(currency='ETH')
-#     print reddit
-#
-#     b = CoinMarketCapData()
-# #     b.getGlobalData()
-# #     global_data = b.globaldata
-# #     print global_data
-# #     b.getData()
-#     symbol_data = b.getDataForCurrency('diamond')
-#     print symbol_data
+    # a = CryptoCompareData()
+    # a.getCoinList()
+    # a.getDataByDays()
+    # a.getDataByHour()
+    # a.getSocialStats()
+    # a.getAverageData()
+    # twitter, reddit, facebook = a.getSocialStats()
+    # print facebook
+    # twitter, reddit, facebook = a.getSocialStats(currency='ETH')
+    # print reddit
+    #
+    # b = CoinMarketCapData()
+    # b.getGlobalData()
+    # global_data = b.globaldata
+    # print global_data
+    # b.getData()
+    # symbol_data = b.getDataForCurrency('diamond')
+    # print symbol_data
+    # b.getData()
+    # currencies = b.data
+    # print currencies

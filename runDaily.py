@@ -1,10 +1,10 @@
 from dbConnect import getCurrencyNames
 from similarity import getCurrencyPopularity
-from ratings import calculateRating
+from ratingsNew import calculateRating
 
 print 'running getCurrencyNames...'
 getCurrencyNames()
 print 'running getCurrencyPopularity...'
 getCurrencyPopularity()
-# print 'running calculateRating...'
-# calculateRating()
+print 'running calculateRating...'
+calculateRating()

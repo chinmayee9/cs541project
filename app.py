@@ -3,7 +3,7 @@ from dbConnect import getDomains
 from similarity import readPopularityAfterRating
 import json
 from wtforms import TextField, Form
-from getDataForFrontEnd import getDatabyCurrency
+from getDataForFrontEnd import getDatabyCurrency, getDataForList
 import os
 
 # crypto flask app
@@ -21,6 +21,14 @@ def index():
 def currency_table():
     return render_template("currency_table.html")
 
+
+# currency table data
+@app.route('/getlistdata')
+def getListData():
+    try:
+        return getDataForList()
+    except:
+        return json.dumps({})
 
 # currency details
 @app.route('/currency/<c_name>')

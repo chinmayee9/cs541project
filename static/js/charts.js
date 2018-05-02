@@ -281,7 +281,7 @@ Highcharts.chart('spread-chart', {
         text: ''
     },
     xAxis: {
-        categories: ['Data Spread'],
+        categories: ['Volatility'],
         title: {
             text: null
         }
@@ -321,7 +321,7 @@ Highcharts.chart('spread-chart', {
         enabled: false
     },
     series: [{
-        name: 'Data Spread',
+        name: 'Volatility',
         data: [$('.datavalues .spread').data()['spread']]
     }]
 });
@@ -761,7 +761,7 @@ Highcharts.chart('spread-chart', {
         text: ''
     },
     xAxis: {
-        categories: ['Data Spread'],
+        categories: ['Volatility'],
         title: {
             text: null
         }
@@ -801,7 +801,7 @@ Highcharts.chart('spread-chart', {
         enabled: false
     },
     series: [{
-        name: 'Data Spread',
+        name: 'Volatility',
         data: [$('.datavalues .spread').data()['spread']]
     }]
 });

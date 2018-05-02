@@ -1,4 +1,5 @@
 import pandas
+import json
 
 
 def getDatabyCurrency(currency=None):
@@ -32,4 +33,31 @@ def getDatabyCurrency(currency=None):
 
     except:
         print "Could not fetch data for: ", currency
+        return {}
+
+
+def sanitizeNames(df):
+    return str('<a target="_blank" href="/currency/'+ df['id'] + '">' + df['name'] + '</a>')
+
+roundOff = lambda x: round(float(x), 2)
+
+
+def getDataForList():
+    try:
+        pandas.options.display.float_format = '{:.2f}'.format
+        data = pandas.read_csv('./csvFiles/currency_data.csv')
+        data = data[['id','name','market_cap_usd','dominance','Popularity','percentPopularity','average','spreadAboutMean','kurtosis','skewness','rating']]
+        data['links'] = data.apply(sanitizeNames, axis=1)
+        data['dominance'] = data['dominance'].apply(roundOff)
+        data['percentPopularity'] = data['percentPopularity'].apply(roundOff)
+        data['average'] = data['average'].apply(roundOff)
+        data['spreadAboutMean'] = data['spreadAboutMean'].apply(roundOff)
+        data['kurtosis'] = data['kurtosis'].apply(roundOff)
+        data['skewness'] = data['skewness'].apply(roundOff)
+        data['rating'] = data['rating'].apply(roundOff)
+
+        datadict = {'data':data.to_dict(orient='records')}
+        return json.dumps(datadict)
+    except:
+        print "An unexpected error occured. Could not fetch data!"
         return {}

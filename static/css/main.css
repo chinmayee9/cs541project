@@ -44,12 +44,10 @@ body{
 
 footer {
     height: 50px;
-    position:fixed;
-    bottom:0;
-    z-index:1000;
     width:100%;
     color:#d9e6f2;
     padding: 10px 0;
+    margin-top:30px;
 }
 
 .footer.container-fluid{
@@ -74,4 +72,12 @@ footer p {
 
 .hidden{
     display:none;
+}
+
+.carousel-control-prev-icon{
+    background-image:url("../img/prev.png");
+}
+
+.carousel-control-next-icon{
+    background-image:url("../img/next.png");
 }

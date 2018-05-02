@@ -30,11 +30,10 @@ def getDatabyCurrency(currency=None):
         if rating <= 3.5:
             trusted = 0
 
-
         params = {'marketcap': int(marketcap), 'dominance': dominance, 'articles': articles, 'popularity': popularity,
                   'volslope': volslope, 'volintercept': volintercept, 'average': average, 'std_dev': std_dev,
                   'spread': spread, 'kurtosis': kurtosis, 'skewness': skewness, 'rating': rating, 'prices': prices,
-                  'volumes': volumes, 'domains':[], 'trusted' : trusted}
+                  'volumes': volumes, 'domains': [], 'trusted': trusted}
         return params
     except:
         print "Could not fetch data for: ", currency

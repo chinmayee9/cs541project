@@ -42,8 +42,8 @@ def getCurrencyPopularity(cloud=False, count=None):
     content = [unicode(article[0], errors='ignore') for article in content_raw]
     with open('./csvFiles/content_total.csv', 'wb') as csv_file:
         writer = csv.writer(csv_file)
-        writer.writerow(['Content','Total'])
-        writer.writerow(['Content',len(content)])
+        writer.writerow(['Content', 'Total'])
+        writer.writerow(['Content', len(content)])
 
     print "getting popularity..."
     currencies = readCurrencies()
@@ -69,7 +69,7 @@ def getCurrencyPopularity(cloud=False, count=None):
         popularity_list.append([currencies[currency[0]], currency[1]])
     with open('./csvFiles/popularity_list.csv', 'wb') as csv_file:
         writer = csv.writer(csv_file)
-        writer.writerow(['Currency','Popularity'])
+        writer.writerow(['Currency', 'Popularity'])
         for p in popularity_list:
             writer.writerow([p[0][0], p[1]])
     if count:

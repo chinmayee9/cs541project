@@ -3,6 +3,7 @@ from dbConnect import getContent, readCurrencies
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import csv
+import pandas
 
 
 def getStopWords():
@@ -86,4 +87,16 @@ def readPopularity():
             if index != 0:
                 row[0] = row[0] + " - " + row[1]
                 popularity_list.append(row)
+    return popularity_list
+
+
+def readPopularityAfterRating():
+    data = pandas.read_csv('./csvFiles/currency_data.csv')
+    data_id = data['id'].tolist()
+    data_pop = data['Popularity'].tolist()
+    popularity_list = []
+    for index, pop in enumerate(data_pop):
+        if pop != 0:
+            # popularity_list.append([data_id[index]  + " - " + str(int(pop)), str(int(pop))])
+            popularity_list.append([data_id[index], int(pop)])
     return popularity_list

@@ -14,7 +14,7 @@ def getSpread(prices, std_dev, avg):
     return ((count / float(total)) * 100)
 
 
-def getRating(dominance , popularity, kutosis, skewness, spread):
+def getRating(dominance, popularity, kutosis, skewness, spread):
     rating = 0
     rating += dominance
     rating += popularity * 10
@@ -109,5 +109,3 @@ def calculateRating():
     currency_data['90dayClosingPrices'] = currency_prices
 
     currency_data.to_csv('./csvFiles/currency_data.csv')
-
-calculateRating()

@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, Response
 from dbConnect import getDomains
-from similarity import readPopularity
+from similarity import readPopularityAfterRating
 import json
 from wtforms import TextField, Form
 from getDataForFrontEnd import getDatabyCurrency
@@ -40,9 +40,9 @@ def currency_domains(c_name):
 @app.route('/word_cloud')
 def word_cloud():
     try:
-        popular = readPopularity()
+        popular = readPopularityAfterRating()
         words_json = [
-            {'text': str(word[0]).capitalize(), 'weight': int(word[1]), 'link': '/currency/' + str(word[0]).lower()} for
+            {'text': str(word[0]).capitalize() + ' - ' + str(word[1]), 'weight': int(word[1]), 'link': '/currency/' + str(word[0]).lower()} for
             word in popular]
         return json.dumps(words_json)
     except:

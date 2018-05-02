@@ -3,14 +3,21 @@
 import MySQLdb
 import csv
 from datetime import date, timedelta
-from getAPIData import CryptoCompareData
+from getAPIData import CryptoCompareData, CoinMarketCapData
 
 
 def getCurrencyNames():
-    a = CryptoCompareData()
-    a.getCoinList()
-    currencies = a.coinlist.head(n=1000)
-    currencies = list(currencies['CoinName'].apply(str))
+    # a = CryptoCompareData()
+    # a.getCoinList()
+    # currencies = a.coinlist.head(n=1000)
+    # currencies = list(currencies['CoinName'].apply(str))
+
+    b = CoinMarketCapData()
+    b.getData()
+    currencies = b.data
+    currencies = currencies[['id', 'market_cap_usd', 'name', 'symbol']]
+    currencies.to_csv('./csvFiles/coin_market_data.csv')
+    currencies = list(currencies['name'].apply(str))
     with open('./csvFiles/list.csv', 'wb') as csv_file:
         writer = csv.writer(csv_file)
         writer.writerow(['Currency'])

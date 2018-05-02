@@ -84,5 +84,6 @@ def readPopularity():
         reader = csv.reader(csv_file)
         for index, row in enumerate(reader):
             if index != 0:
+                row[0] = row[0] + " - " + row[1]
                 popularity_list.append(row)
-    return popularity_list[2:]
+    return popularity_list

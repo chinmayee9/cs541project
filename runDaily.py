@@ -6,5 +6,5 @@ print 'running getCurrencyNames...'
 getCurrencyNames()
 print 'running getCurrencyPopularity...'
 getCurrencyPopularity()
-print 'running calculateRating...'
-calculateRating()
+# print 'running calculateRating...'
+# calculateRating()

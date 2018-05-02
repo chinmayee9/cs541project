@@ -147,22 +147,26 @@ class CoinMarketCapData(object):
         except:
             print "An unexpected error occurred. Data could not be fetched."
 
+
 # if __name__ == '__main__':
-#     a = CryptoCompareData()
-#     a.getCoinList()
-#     a.getDataByDays()
-#     a.getDataByHour()
-#     a.getSocialStats()
-#     a.getAverageData()
-#     twitter, reddit, facebook = a.getSocialStats()
-#     print facebook
-#     twitter, reddit, facebook = a.getSocialStats(currency='ETH')
-#     print reddit
-#
-#     b = CoinMarketCapData()
-# #     b.getGlobalData()
-# #     global_data = b.globaldata
-# #     print global_data
-# #     b.getData()
-#     symbol_data = b.getDataForCurrency('diamond')
-#     print symbol_data
+    # a = CryptoCompareData()
+    # a.getCoinList()
+    # a.getDataByDays()
+    # a.getDataByHour()
+    # a.getSocialStats()
+    # a.getAverageData()
+    # twitter, reddit, facebook = a.getSocialStats()
+    # print facebook
+    # twitter, reddit, facebook = a.getSocialStats(currency='ETH')
+    # print reddit
+    #
+    # b = CoinMarketCapData()
+    # b.getGlobalData()
+    # global_data = b.globaldata
+    # print global_data
+    # b.getData()
+    # symbol_data = b.getDataForCurrency('diamond')
+    # print symbol_data
+    # b.getData()
+    # currencies = b.data
+    # print currencies

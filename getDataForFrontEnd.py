@@ -1,5 +1,4 @@
 import pandas
-from dbConnect import getDomains
 
 
 def getDatabyCurrency(currency=None):
@@ -21,7 +20,6 @@ def getDatabyCurrency(currency=None):
         rating = list(data['rating'])[0]
         prices = list(data['90dayClosingPrices'])[0]
         volumes = list(data['90dayVolumes'])[0]
-        # domains = getDomains(currency)
 
         if rating > 5.7:
             trusted = 2

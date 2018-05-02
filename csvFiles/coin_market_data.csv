@@ -1,0 +1,101 @@
+,id,market_cap_usd,name,symbol
+0,bitcoin,154028206342,Bitcoin,BTC
+1,ethereum,66815631813.0,Ethereum,ETH
+2,ripple,32825766484.0,Ripple,XRP
+3,bitcoin-cash,22985118662.0,Bitcoin Cash,BCH
+4,eos,15851701483.0,EOS,EOS
+5,cardano,9228377779.0,Cardano,ADA
+6,litecoin,8300897096.0,Litecoin,LTC
+7,stellar,8213149994.0,Stellar,XLM
+8,tron,6007122244.0,TRON,TRX
+9,iota,5449241325.0,IOTA,MIOTA
+10,neo,5409365000.0,NEO,NEO
+11,monero,3947560126.0,Monero,XMR
+12,dash,3784756845.0,Dash,DASH
+13,nem,3612294000.0,NEM,XEM
+14,tether,2420839039.0,Tether,USDT
+15,vechain,2394361389.0,VeChain,VEN
+16,ethereum-classic,2167340744.0,Ethereum Classic,ETC
+17,qtum,1942262451.0,Qtum,QTUM
+18,omisego,1715774078.0,OmiseGO,OMG
+19,icon,1665300031.0,ICON,ICX
+20,binance-coin,1611734149.0,Binance Coin,BNB
+21,lisk,1389870313.0,Lisk,LSK
+22,verge,1225040935.0,Verge,XVG
+23,bitcoin-gold,1209095456.0,Bitcoin Gold,BTG
+24,zcash,1095669127.0,Zcash,ZEC
+25,aeternity,1094215203.0,Aeternity,AE
+26,nano,1075269722.0,Nano,NANO
+27,steem,988062159.0,Steem,STEEM
+28,ontology,984626912.0,Ontology,ONT
+29,bytom,973432698.0,Bytom,BTM
+30,bitshares,953439333.0,BitShares,BTS
+31,bytecoin-bcn,949036854.0,Bytecoin,BCN
+32,siacoin,904001433.0,Siacoin,SC
+33,wanchain,883197231.0,Wanchain,WAN
+34,populous,879508011.0,Populous,PPT
+35,bitcoin-diamond,854516191.0,Bitcoin Diamond,BCD
+36,bitcoin-private,754602735.0,Bitcoin Private,BTCP
+37,zilliqa,735481019.0,Zilliqa,ZIL
+38,stratis,727101264.0,Stratis,STRAT
+39,waves,674909000.0,Waves,WAVES
+40,maker,643711119.0,Maker,MKR
+41,0x,631051500.0,0x,ZRX
+42,rchain,629685684.0,RChain,RHOC
+43,dogecoin,585706707.0,Dogecoin,DOGE
+44,decred,573499462.0,Decred,DCR
+45,status,544449497.0,Status,SNT
+46,digixdao,538312000.0,DigixDAO,DGD
+47,mixin,532575142.0,Mixin,XIN
+48,loopring,532233663.0,Loopring,LRC
+49,basic-attention-token,520148000.0,Basic Attention Token,BAT
+50,aelf,506127500.0,aelf,ELF
+51,aion,495505604.0,Aion,AION
+52,hshare,479153289.0,Hshare,HSR
+53,iostoken,477018360.0,IOStoken,IOST
+54,waltonchain,474100397.0,Waltonchain,WTC
+55,golem-network-tokens,469398349.0,Golem,GNT
+56,digibyte,436833334.0,DigiByte,DGB
+57,augur,427993500.0,Augur,REP
+58,komodo,405974987.0,Komodo,KMD
+59,ardor,393839567.0,Ardor,ARDR
+60,ark,364649468.0,Ark,ARK
+61,nebulas-token,354981185.0,Nebulas,NAS
+62,kyber-network,350641648.0,Kyber Network,KNC
+63,mithril,339855140.0,Mithril,MITH
+64,pivx,330170741.0,PIVX,PIVX
+65,substratum,317383457.0,Substratum,SUB
+66,cortex,313320884.0,Cortex,CTXC
+67,kucoin-shares,307040533.0,KuCoin Shares,KCS
+68,qash,303931600.0,QASH,QASH
+69,monacoin,299580777.0,MonaCoin,MONA
+70,gas,295076029.0,Gas,GAS
+71,cryptonex,282400886.0,Cryptonex,CNX
+72,syscoin,278783279.0,Syscoin,SYS
+73,centrality,271654880.0,Centrality,CENNZ
+74,storm,266618442.0,Storm,STORM
+75,dragonchain,266496123.0,Dragonchain,DRGN
+76,ethos,265453686.0,Ethos,ETHOS
+77,waykichain,258046866.0,WaykiChain,WICC
+78,reddcoin,255204867.0,ReddCoin,RDD
+79,dentacoin,254214683.0,Dentacoin,DCN
+80,pundi-x,249834167.0,Pundi X,NPXS
+81,elastos,249485563.0,Elastos,ELA
+82,nxt,244287454.0,Nxt,NXT
+83,factom,244101158.0,Factom,FCT
+84,gxchain,239083200.0,GXChain,GXS
+85,bancor,236869894.0,Bancor,BNT
+86,salt,231233470.0,SALT,SALT
+87,gifto,227806458.0,Gifto,GTO
+88,funfair,226468339.0,FunFair,FUN
+89,wax,225975643.0,WAX,WAX
+90,veritaseum,214513754.0,Veritaseum,VERI
+91,fusion,211371733.0,Fusion,FSN
+92,zcoin,204843359.0,ZCoin,XZC
+93,enigma-project,204211447.0,Enigma,ENG
+94,power-ledger,203874758.0,Power Ledger,POWR
+95,neblio,202040537.0,Neblio,NEBL
+96,nucleus-vision,197890829.0,Nucleus Vision,NCASH
+97,chainlink,192677800.0,ChainLink,LINK
+98,decentraland,186085075.0,Decentraland,MANA
+99,kin,181121659.0,Kin,KIN
